@@ -1,0 +1,171 @@
+.popover-validations.popover {
+    background: none repeat scroll 0 0 rgba(211, 32, 32, 0.8);
+    color: #fff;
+    font-family: "proxima_nova_rgregular";
+    font-size: 11px;
+}
+.popover-validations .popover-content{
+    padding:3px 14px;
+}
+.popover-validations.popover.top > .arrow:after {
+    border-top-color: rgba(211, 32, 32, 0.8);
+}
+.loginSignup .popover-validations.popover {
+    background: none repeat scroll 0 0 rgba(211, 32, 32, 0.8);
+    color: #fff;
+}
+.loginSignup .popover-validations.popover.top > .arrow:after {
+    border-top-color: rgba(211, 32, 32, 0.8);
+}
+.imgUploadValidation {
+    position: relative;
+}
+.imgUploadValidation .popover.popover-validations {
+    left: 53px !important;
+    top: 28px !important;
+}
+.imgUploadValidation .popover-validations.popover.top > .arrow:after {
+    left: 18px;
+}
+.popover-validations button.close {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #1d2027;
+    font-family: "proxima_nova_rgregular";
+    font-size: 14px;
+    height: auto;
+    opacity: 0.28;
+    position: absolute;
+    right: -7px;
+    text-align: center;
+    text-shadow: 0 1px 0 #1d2027;
+    top: 0;
+    width: 30px;
+}
+.popover-validations button.close:hover {
+    color: #1d2027;
+    opacity: 1;
+    text-shadow: 0 1px 0 #1d2027;
+}
+.removemore:nth-child(2) {
+    display: none;
+}
+.companyselected a {
+    background: none repeat scroll 0 0 #1caf9a !important;
+    color: #fff !important;
+}
+.chosen-select + .popover-validations {
+    left: 175px!important;
+    top: -41px!important;
+}
+.chosen-select + .popover-validations > .arrow {
+    left: 50%!important;
+}
+.text-white, .text-white:hover{
+    color: #fff!important;
+}
+
+.checkbox:not(.poConfirmCheckbox) .popover-validations {
+    left: -114px!important;
+    top: -20px!important;
+}
+.checkbox .popover-validations > .arrow {
+    left: 50%!important;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print .noprintable, #section-to-print .noprintable *{
+      visibility: hidden;
+  }
+  #section-to-print div[class*="col-"]{
+   float: none;   
+   width:100%;
+  }
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  a:link:after, a:visited:after {  
+      display: none;
+      content: "";    
+    }
+}
+.pro_img{
+    position: relative;
+    cursor: pointer;
+}
+
+.ProfilePicEditDiv {
+    bottom: 20px;
+    left: 30%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.25s ease-in-out 0s;
+    width: 70px;
+}
+.pro_edit {
+    background: #1caf9a none repeat scroll 0 0;
+    border: 1px solid #1caf9a;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    padding: 0 5px;
+}
+#profile_img {
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+}
+.pro_img:hover .ProfilePicEditDiv {
+    opacity: 1;
+}
+.profil_progress {
+    bottom: 3px;
+    display: none;
+    position: absolute;
+    right: 11px;
+    width: 90%;
+}
+.profil_progress .progress {
+    background: #242c31 none repeat scroll 0 0;
+    border: 2px solid #1f272c;
+    display: inline-block;
+    height: 9px;
+    margin-bottom: 0;
+    width: 100%;
+}
+.profil_progress .progress-bar {
+    background-color: #1caf9a;
+}
+
+#commentWrapper{
+    height: 200px;
+}
+#commentWrapper .table-email{
+    background: none;
+    padding: 0 15px 0 0;
+}
+
+.mediaList{ background: #e3e3e3;
+    padding: 15px 10px 0;}
+.filesetIcon span{ font-size: 100px;  }
+.filesetIcon{ text-align: center; padding: 15px 0;}
+
+.stat-custom {
+    color: #FFFFFF;
+}
