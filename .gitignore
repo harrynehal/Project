@@ -1,5 +1,6 @@
 # CakePHP specific files #
 ##########################
+
 event-managment/config/app.php
 event-managment/config/.env
 event-managment/logs/*
