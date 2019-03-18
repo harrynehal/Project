@@ -9,9 +9,8 @@ use Cake\Core\Configure;
     <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
-            <li><?php echo $this->Html->link('Dashboard', array('controller' => 'Users', 'action' => 'dashboard')); ?></li>
             <li class="active">User</li>
-            <li><?php echo $this->Html->link('Add New User', array('controller' => 'Users', 'action' => 'add'), array('class' => 'btn btn-success btn-xs')); ?></li>
+            <li><?php echo $this->Html->link('Add', array('controller' => 'Users', 'action' => 'add'), array('class' => 'btn btn-success btn-xs')); ?></li>
         </ol>
     </div>
 </div>

@@ -8,7 +8,6 @@ $this->assign('title', 'Add Business Unit');
     <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
-            <li><?php echo $this->Html->link('Dashboard', array('controller' => 'users', 'action' => 'dashboard')); ?></li>
             <li><?php echo $this->Html->link('User', array('controller' => 'users', 'action' => 'index')); ?></li>
             <li class="active">Add</li>
         </ol>

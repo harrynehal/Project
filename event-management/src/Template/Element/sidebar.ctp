@@ -21,17 +21,12 @@
     </div>
 
     <h5 class="sidebartitle">Navigation</h5>
-    <ul class="nav nav-pills nav-stacked nav-bracket">
-
-        <li <?php echo ($this->request->action == 'dashboard') ? 'class=active' : ''; ?>>
-            <a href="<?php echo $this->Url->build(array('controller' => 'users', 'action' => 'dashboard')); ?>"><i class="fa fa-home"></i> <span>Dashboard</span></a>
-        </li>
-        
+    <ul class="nav nav-pills nav-stacked nav-bracket">        
         <li <?php echo ($this->request->params['controller'] == 'Users' && $this->request->action == 'index') || ($this->request->params['controller'] == 'Users' && $this->request->action == 'add') ? 'class=active' : ''; ?>>
-            <a href="<?php echo $this->Url->build(array('controller' => 'users', 'action' => 'index')); ?>"><i class="fa fa-briefcase"></i> <span>Manage Users</span></a>
+            <a href="<?php echo $this->Url->build(array('controller' => 'users', 'action' => 'index')); ?>"><i class="fa fa-briefcase"></i> <span>Users</span></a>
         </li>
             <li <?php echo ($this->request->params['controller'] == 'Events' && $this->request->action == 'index') || ($this->request->params['controller'] == 'Events' && $this->request->action == 'add') ? 'class=active' : ''; ?>>
-                <a href="<?php echo $this->Url->build(array('controller' => 'events', 'action' => 'index')); ?>"><i class="fa fa-building-o"></i> <span>Manage Events</span></a>
+                <a href="<?php echo $this->Url->build(array('controller' => 'events', 'action' => 'index')); ?>"><i class="fa fa-building-o"></i> <span>Events</span></a>
             </li>
             
     </ul>

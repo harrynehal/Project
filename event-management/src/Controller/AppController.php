@@ -88,12 +88,43 @@ class AppController extends Controller
     public function beforeRender(Event $event)
     {
         if(strpos($this->request->url, '.json') !== false) {
-			
+			if($this->request->url == 'api/login.json') {
+                $this->loadModel('Users');//pr($this->request->data());die;
+                $hasher = new \Cake\Auth\DefaultPasswordHasher();
+                //echo $hasher->check('admin', '$2y$10$fIMuJZSO0cyyCb1ddJpur.eLL6Xp1rnTPO9wJSyd7B4wIVPCDtl6G');die;
+                $users = $this->Users->find()
+                ->where(['Users.username' => $this->request->data('username'), 'Users.role' => 'user'])
+                ->first();
+                //pr($users);die;
+                if(!empty($users)) {
+                    if($hasher->check($this->request->data('password'), $users['password'])) {
+						$this->response->statusCode(200);
+                        $response['status'] = 'success';
+                        $response['data'] = $users;
+                    } else {
+						$this->response->statusCode(400);
+                        $response['status'] = 'error';
+                        $response['message'] = 'Invalid Username and password';
+					}
+                } else {
+					$this->response->statusCode(400);
+                    $response['status'] = 'error';
+                    $response['message'] = 'Invalid Username and password';
+                }
+            
+                //response
+                $this->set('response', $response);
+                $this->set('_serialize', array('response'));
+                
+                //pr($users);die;
+                
+			}
 			if($this->request->url == 'api/events.json') {
 				$this->loadModel('Events');
 				$event = $this->Events->find()
                 ->all();//pr($event);die;
                 if(!empty($event)) {
+					$this->response->statusCode(200);
 					$response['status'] = 'success';
 					$response['path'] = '/uploads/image/';
                     $response['data'] = $event;

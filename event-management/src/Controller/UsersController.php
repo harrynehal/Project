@@ -21,7 +21,7 @@ class UsersController extends AppController
     public function login()
     {
         if ($this->Auth->user()) {
-            $this->redirect(array('users' => false,'action' => 'dashboard'));            
+            $this->redirect(array('users' => false,'action' => 'index'));            
         }
         
         if ($this->request->is('post')) { //pr($this->request->data);die;
@@ -40,18 +40,6 @@ class UsersController extends AppController
         $this->viewBuilder()->setLayout('login');
         $this->set('title', 'Login');
         
-    }
-    
-    public function dashboard()
-    {
-		$this->loadModel('Events');
-        $userCount = $this->Users->find()
-                ->where(['Users.role' => 'user'])
-                ->count();
-        $eventCount = $this->Events->find()
-                ->count();
-        $this->set(compact('userCount', 'eventCount'));
-        //die('dashboard');
     }
     
     public function logout() {

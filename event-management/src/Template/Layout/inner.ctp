@@ -54,9 +54,7 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                                        <li><i class="glyphicon glyphicon-cog"></i> My Profile</li>
-<!--                                        <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>-->
-                                        <li><a href="<?php echo $this->Url->build(array('controller' => 'users', 'action' => 'logout')); ?>"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
+                                       <li><a href="<?php echo $this->Url->build(array('controller' => 'users', 'action' => 'logout')); ?>"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
                                     </ul>
                                 </div>
                             </li>

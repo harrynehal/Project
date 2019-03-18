@@ -9,7 +9,6 @@ echo $this->Html->css('bootstrap-datetimepicker.min');
     <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
-            <li><?php echo $this->Html->link('Dashboard', array('controller' => 'users', 'action' => 'dashboard')); ?></li>
             <li><?php echo $this->Html->link('Event', array('controller' => 'events', 'action' => 'index')); ?></li>
             <li class="active">Add</li>
         </ol>
@@ -39,7 +38,7 @@ echo $this->Flash->render();
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-3 control-label">Event Date</label>
+                <label class="col-sm-3 control-label">Event Date<span class="asterisk">*</span></label>
                 <div class="col-sm-3">
                     <?= $this->Form->control('date', array('placeholder' => 'Select date', 'label' => false, 'class' => 'form-control date-picker', 'id'=>'datepicker')); ?>                                        
                 </div>
@@ -57,7 +56,7 @@ echo $this->Flash->render();
             </div>
             <div class="form-group">
 
-                <label class="col-sm-3 control-label">Description</label>
+                <label class="col-sm-3 control-label">Description<span class="asterisk">*</span></label>
                 <div class="col-sm-9">
                     <?= $this->Form->textarea('description', array('placeholder' => 'Enter description here...', 'label' => false, 'class' => 'form-control', 'rows' => '6', 'cols' => '30')); ?> 
 
